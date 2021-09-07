@@ -37,7 +37,7 @@ public class SuccessServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		request.getRequestDispatcher("link.html").include(request, response);
 
-		HttpSession session = request.getSession(true);
+		HttpSession session = request.getSession(false);
 		if (session != null) {
 			String username = (String) session.getAttribute("username");
 
@@ -65,7 +65,7 @@ public class SuccessServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		request.getRequestDispatcher("link.html").include(request, response);
 
-		HttpSession session = request.getSession(true);
+		HttpSession session = request.getSession(false);
 		if (session != null) {
 			String username = (String) session.getAttribute("username");
 
