@@ -25,4 +25,38 @@
     <servlet-name>LogoutServlet</servlet-name>
     <url-pattern>/LogoutServlet</url-pattern>
   </servlet-mapping>
+  
+  	<servlet>
+		<servlet-name>MySqlUpdate</servlet-name>
+		<servlet-class>com.simplilearn.Servlet.jdbc.UpdateData</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MySqlUpdate</servlet-name>
+		<url-pattern>/update</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>MySqlSelect</servlet-name>
+		<servlet-class>com.simplilearn.Servlet.jdbc.SelectData</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MySqlSelect</servlet-name>
+		<url-pattern>/select</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>MySqlInsert</servlet-name>
+		<servlet-class>com.simplilearn.Servlet.jdbc.InsertData</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MySqlInsert</servlet-name>
+		<url-pattern>/insert</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>MySqlDelete</servlet-name>
+		<servlet-class>com.simplilearn.Servlet.jdbc.DeleteData</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MySqlDelete</servlet-name>
+		<url-pattern>/delete</url-pattern>
+	</servlet-mapping>
+  
 </web-app>

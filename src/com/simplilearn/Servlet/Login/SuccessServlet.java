@@ -32,23 +32,19 @@ public class SuccessServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		PrintWriter out = response.getWriter();
 		request.getRequestDispatcher("link.html").include(request, response);
-
 		HttpSession session = request.getSession(false);
 		if (session != null) {
-			String username = (String) session.getAttribute("username");
+			int uid = (Integer) session.getAttribute("uid");
 
-			out.print("Hello, " + username + " Welcome to Profile");
+			out.print("Hello, " + uid + " Welcome to Profile");
 		} else {
 			out.print("Please login first");
 			request.getRequestDispatcher("login.html").include(request, response);
 		}
 		out.close();
 	}
-
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
