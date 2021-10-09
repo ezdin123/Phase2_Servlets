@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<body role="document">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 column">
+				<form role="form">
+					<div class="radio-inline">
+					  <label>
+					    <input type="radio" name="travel_type" value="oneway" checked>One way
+					  </label>
+					</div>
+					<div class="radio-inline">
+						<label>
+					  	<input type="radio" name="travel_type" value="roundtrip">Round trip
+					  </label>
+					</div>
+					<div class="form-group">
+						<label for="from">From</label>
+						<select class="form-control" id="from">
+							<option></option>
+							<option value="BOM">Mumbai - BOM</option>
+							<option value="DEL">Delhi - DEL</option>
+							<option value="BLR">Bangalore - BLR</option>
+							<option value="PUN">Pune - PUN</option>
+							<option value="KOL">Kolkatta - KOL</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="to">To</label>
+						<select class="form-control" id="to">
+							<option></option>
+							<option value="BOM">Mumbai - BOM</option>
+							<option value="DEL">Delhi - DEL</option>
+							<option value="BLR">Bangalore - BLR</option>
+							<option value="PUN">Pune - PUN</option>
+							<option value="KOL">Kolkatta - KOL</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="ondate">On</label><input type="text" class="form-control" id="ondate" required>
+					</div>
+					<div class="form-group">
+						<label for="returndate">Return</label><input type="text" class="form-control" id="returndate">
+					</div>
+					<div class="form-group">
+						<label for="returndate">Price</label>
+						<span id="amount"></span>
+						<div id="slider-range"></div>
+					</div>
+					<button type="button" id="search-flights" class="btn btn-default">Submit</button>
+				</form>
+			</div>
+			<div class="col-md-8 column">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Number</th>
+							<th>Dep.</th>
+							<th>Arr.</th>
+							<th>Price</th>
+							<th>Dep. Time</th>
+						</tr>
+					</thead>
+					<tbody id="flights_info"></tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
